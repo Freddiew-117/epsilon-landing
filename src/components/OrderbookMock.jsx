@@ -17,8 +17,8 @@ export function OrderbookMock() {
   }, [data])
 
   return (
-    <div className="bg-space-light rounded-xl p-6 border border-gray-800">
-      <h4 className="text-lg font-semibold mb-4 text-white">Real-Time Orderbook</h4>
+    <div className="bg-gray-100 dark:bg-space-light rounded-xl p-6 border border-gray-200 dark:border dark:border-gray-800">
+      <h4 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">Real-Time Orderbook</h4>
       
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         {/* Asks */}
@@ -31,7 +31,7 @@ export function OrderbookMock() {
                 className="flex justify-between text-sm font-mono"
               >
                 <span className="text-red-400">{ask.price}</span>
-                <span className="text-gray-300">{ask.size}</span>
+                <span className="text-gray-700 dark:text-gray-300">{ask.size}</span>
               </div>
             ))}
           </div>
@@ -47,20 +47,20 @@ export function OrderbookMock() {
                 className="flex justify-between text-sm font-mono"
               >
                 <span className="text-green-400">{bid.price}</span>
-                <span className="text-gray-300">{bid.size}</span>
+                <span className="text-gray-700 dark:text-gray-300">{bid.size}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      <div className="text-center text-sm text-gray-500 mb-4">
+      <div className="text-center text-sm text-gray-600 dark:text-gray-500 mb-4">
         Spread: {orderbook.spread.toFixed(2)}
       </div>
 
       {/* Recent Trades */}
       <div>
-        <div className="text-sm font-medium text-gray-400 mb-2">Recent Trades</div>
+        <div className="text-sm font-medium text-gray-600 dark:text-gray-400 mb-2">Recent Trades</div>
         <div className="space-y-1 max-h-32 overflow-y-auto">
           {trades.map((trade, index) => (
             <div
@@ -70,7 +70,7 @@ export function OrderbookMock() {
               <span className={trade.side === 'buy' ? 'text-green-400' : 'text-red-400'}>
                 {trade.price}
               </span>
-              <span className="text-gray-400">{trade.size}</span>
+              <span className="text-gray-600 dark:text-gray-400">{trade.size}</span>
             </div>
           ))}
         </div>

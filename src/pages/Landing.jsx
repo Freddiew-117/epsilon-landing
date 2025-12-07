@@ -6,6 +6,8 @@ import { SpaceDecoration } from '../components/SpaceDecoration'
 import { OrderbookMock } from '../components/OrderbookMock'
 import { PositionsMock } from '../components/PositionsMock'
 import { DashboardMock } from '../components/DashboardMock'
+import { PositionManagementMock } from '../components/PositionManagementMock'
+import { TokenomicsChart } from '../components/TokenomicsChart'
 
 export function Landing() {
   return (
@@ -59,6 +61,7 @@ export function Landing() {
             'Partial/close positions',
             'Order/trade history',
           ]}
+          illustration={<PositionManagementMock />}
           reverse
         />
 
@@ -71,9 +74,18 @@ export function Landing() {
             'Live trades feed',
             'Millisecond updates',
           ]}
+          illustration={
+            <div className="bg-gray-100 dark:bg-space-light rounded-xl p-4 border border-gray-200 dark:border dark:border-gray-800 glow-orange">
+              <img 
+                src="/chart.png" 
+                alt="Real-Time Orderbook Chart" 
+                className="w-full h-auto rounded-lg"
+              />
+            </div>
+          }
         />
 
-        <FeatureCard
+        {/* <FeatureCard
           title="Portfolio Dashboard"
           description="Comprehensive account overview and analytics."
           bullets={[
@@ -83,21 +95,22 @@ export function Landing() {
             'Funding history',
           ]}
           reverse
-        />
+        /> */}
 
         {/* Second Announcement Banner */}
-        <div className="relative my-16 sm:my-20">
+
+        {/* <div className="relative my-16 sm:my-20">
           <SpaceDecoration type="planet-large" position="right" size="large" />
           <Banner
             title="⚡ Zero-Fee Trading Event"
             message="Experience professional-grade trading with zero fees during our launch period. Limited time offer for early adopters."
             ctaText="Learn More"
             ctaLink="#"
-            variant="blue"
+            variant="amber"
           />
-        </div>
+        </div> */}
 
-        <FeatureCard
+        {/* <FeatureCard
           title="Liquidations"
           description="Automated risk management and liquidation system."
           bullets={[
@@ -106,10 +119,9 @@ export function Landing() {
             'Collateral seizure',
             'Bounty system',
           ]}
-        />
-        <SpaceDecoration type="spaceship" position="right" size="medium" />
+        /> */}
 
-        <FeatureCard
+        {/* <FeatureCard
           title="Cross-Market Trading"
           description="Trade multiple markets including BTC, ETH, and more."
           bullets={[
@@ -118,9 +130,9 @@ export function Landing() {
             'Unified interface across markets',
           ]}
           reverse
-        />
+        /> */}
 
-        <FeatureCard
+        {/* <FeatureCard
           title="Oracle-Backed Pricing"
           description="Secure and reliable price feeds."
           bullets={[
@@ -128,9 +140,9 @@ export function Landing() {
             'Low latency feeds',
             'Anti-manipulation notes',
           ]}
-        />
+        /> */}
 
-        <FeatureCard
+        {/* <FeatureCard
           title="Fast Deposits & Withdrawals"
           description="Seamless fund management with safety constraints."
           bullets={[
@@ -139,9 +151,9 @@ export function Landing() {
             'Safety constraints',
           ]}
           reverse
-        />
+        /> */}
 
-        <FeatureCard
+        {/* <FeatureCard
           title="Advanced Trading Features"
           description="Professional-grade order types and execution."
           bullets={[
@@ -152,9 +164,9 @@ export function Landing() {
             'Hidden orders',
             'Pro UI scaling',
           ]}
-        />
+        /> */}
 
-        <FeatureCard
+        {/* <FeatureCard
           title="Admin / Operator Tools"
           description="Comprehensive platform management capabilities."
           bullets={[
@@ -165,9 +177,9 @@ export function Landing() {
             'Emergency pause',
           ]}
           reverse
-        />
+        /> */}
 
-        <FeatureCard
+        {/* <FeatureCard
           title="Full WebSocket-Based Real-Time UI"
           description="Live data streaming for all market and account information."
           bullets={[
@@ -176,21 +188,40 @@ export function Landing() {
             'Liquidations feed',
             'Real-time synchronization',
           ]}
-        />
+        /> */}
         <SpaceDecoration type="planet" position="left" size="medium" />
       </Section>
 
       {/* Announcement Banner */}
-      <div className="relative py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+      {/* <div className="relative py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
         <SpaceDecoration type="planet" position="left" size="medium" />
         <Banner
           title="🌟 Join the Revolution"
           message="Be part of the next generation of decentralized trading. Connect with traders, share strategies, and help shape the future of perpetual futures."
           ctaText="Get Started"
           ctaLink="#"
-          variant="turquoise"
+            variant="red-orange"
         />
-        <SpaceDecoration type="spaceship" position="right" size="small" />
+      </div> */}
+
+      {/* Tokenomics Section */}
+      <Section id="tokenomics" title="Project Tokenomics" className="relative">
+        <SpaceDecoration type="planet" position="right" size="large" />
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8">
+            <TokenomicsChart />
+          </div>
+        </div>
+      </Section>
+
+      {/* Airdrop Banner */}
+      <div className="relative py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
+        <SpaceDecoration type="planet" position="left" size="small" />
+        <Banner
+          title="🎁 Initial Airdrop Distribution"
+          message="Everyone holding 100k or less CIFI V1 on XDC Network has been airdropped their tokens from the Initial Airdrop. For balances above 100k, please contact support to claim your tokens."
+          variant="orange"
+        />
       </div>
     </div>
   )

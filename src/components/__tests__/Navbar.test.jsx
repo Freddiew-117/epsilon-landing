@@ -19,10 +19,10 @@ describe('Navbar', () => {
   it('renders logo and brand name', () => {
     renderWithRouter(<Navbar />)
     
-    const logo = screen.getByAltText('epsilon Logo')
+    const logo = screen.getByAltText('Epsilon Logo')
     expect(logo).toBeInTheDocument()
     
-    const brandName = screen.getByText('epsilon')
+    const brandName = screen.getByText('Epsilon')
     expect(brandName).toBeInTheDocument()
   })
 

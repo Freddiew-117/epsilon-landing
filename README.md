@@ -1,6 +1,6 @@
-# epsilon Landing Site
+# Epsilon Landing Site
 
-A modern, space-themed landing site for epsilon - a decentralized perpetual futures trading platform. Built with React, Vite, Tailwind CSS, and React Router.
+A modern, space-themed landing site for Epsilon - a decentralized perpetual futures trading platform. Built with React, Vite, Tailwind CSS, and React Router.
 
 ## Features
 
@@ -34,7 +34,7 @@ A modern, space-themed landing site for epsilon - a decentralized perpetual futu
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd epsilon-landing
+cd Epsilon-landing
 ```
 
 2. Install dependencies:
@@ -71,7 +71,7 @@ npm run preview
 ## Project Structure
 
 ```
-epsilon-landing/
+Epsilon-landing/
 ├── public/
 │   └── logo.png          # Logo file (used in navbar and favicon)
 ├── src/

@@ -7,14 +7,14 @@
 - `space-darker`: `#050508` - Deepest background
 - `space-light`: `#1a1a2e` - Lighter dark surface
 
-### Primary Colors (Blue)
-- `primary-50` to `primary-900`: Blue scale from light to dark
-- Primary accent: `primary-600` (`#0284c7`)
+### Primary Colors (Orange)
+- `primary-50` to `primary-900`: Orange scale from light to dark
+- Primary accent: `primary-600` (`#e03f00`) - Logo color
 
 ### Accent Colors
-- `accent-purple`: `#a855f7` - Purple accent
-- `accent-blue`: `#3b82f6` - Blue accent
-- `accent-turquoise`: `#06b6d4` - Turquoise accent
+- `accent-orange`: `#e03f00` - Primary orange accent (logo color)
+- `accent-amber`: `#f59e0b` - Amber accent
+- `accent-red-orange`: `#dc2626` - Red-orange accent
 
 ### Text Colors
 - Primary text: `gray-100` (`#f3f4f6`)
@@ -76,9 +76,9 @@ Based on Tailwind's default scale (4px base):
 ## Shadows
 
 ### Glow Effects
-- `glow-purple`: Purple glow shadow
-- `glow-blue`: Blue glow shadow
-- `glow-turquoise`: Turquoise glow shadow
+- `glow-orange`: Orange glow shadow
+- `glow-amber`: Amber glow shadow
+- `glow-red-orange`: Red-orange glow shadow
 
 ### Standard Shadows
 - `shadow-sm`: Small shadow

@@ -19,56 +19,56 @@ export function DashboardMock() {
   }
 
   return (
-    <div className="bg-space-light rounded-xl p-6 border border-gray-800">
-      <h4 className="text-lg font-semibold mb-6 text-white">Portfolio Dashboard</h4>
+    <div className="bg-gray-100 dark:bg-space-light rounded-xl p-6 border border-gray-200 dark:border dark:border-gray-800">
+      <h4 className="text-lg font-semibold mb-6 text-gray-900 dark:text-white">Portfolio Dashboard</h4>
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
-        <div className="bg-space-darker rounded-lg p-4 border border-gray-800">
-          <div className="text-sm text-gray-500 mb-1">Account Equity</div>
-          <div className="text-2xl font-bold text-white">{formatCurrency(portfolio.equity)}</div>
+        <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-4 border border-gray-300 dark:border dark:border-gray-800">
+          <div className="text-sm text-gray-600 dark:text-gray-500 mb-1">Account Equity</div>
+          <div className="text-2xl font-bold text-gray-900 dark:text-white">{formatCurrency(portfolio.equity)}</div>
         </div>
         
-        <div className="bg-space-darker rounded-lg p-4 border border-gray-800">
-          <div className="text-sm text-gray-500 mb-1">Available Margin</div>
+        <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-4 border border-gray-300 dark:border dark:border-gray-800">
+          <div className="text-sm text-gray-600 dark:text-gray-500 mb-1">Available Margin</div>
           <div className="text-2xl font-bold text-green-400">{formatCurrency(portfolio.availableMargin)}</div>
         </div>
         
-        <div className="bg-space-darker rounded-lg p-4 border border-gray-800">
-          <div className="text-sm text-gray-500 mb-1">Used Margin</div>
+        <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-4 border border-gray-300 dark:border dark:border-gray-800">
+          <div className="text-sm text-gray-600 dark:text-gray-500 mb-1">Used Margin</div>
           <div className="text-2xl font-bold text-yellow-400">{formatCurrency(portfolio.usedMargin)}</div>
         </div>
         
-        <div className="bg-space-darker rounded-lg p-4 border border-gray-800">
-          <div className="text-sm text-gray-500 mb-1">Unrealized PnL</div>
+        <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-4 border border-gray-300 dark:border dark:border-gray-800">
+          <div className="text-sm text-gray-600 dark:text-gray-500 mb-1">Unrealized PnL</div>
           <div className={`text-2xl font-bold ${parseFloat(portfolio.unrealizedPnl) >= 0 ? 'text-green-400' : 'text-red-400'}`}>
             {parseFloat(portfolio.unrealizedPnl) >= 0 ? '+' : ''}{formatCurrency(portfolio.unrealizedPnl)}
           </div>
         </div>
         
-        <div className="bg-space-darker rounded-lg p-4 border border-gray-800">
-          <div className="text-sm text-gray-500 mb-1">Realized PnL</div>
+        <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-4 border border-gray-300 dark:border dark:border-gray-800">
+          <div className="text-sm text-gray-600 dark:text-gray-500 mb-1">Realized PnL</div>
           <div className="text-2xl font-bold text-green-400">{formatCurrency(portfolio.realizedPnl)}</div>
         </div>
         
-        <div className="bg-space-darker rounded-lg p-4 border border-gray-800">
-          <div className="text-sm text-gray-500 mb-1">Total PnL</div>
+        <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-4 border border-gray-300 dark:border dark:border-gray-800">
+          <div className="text-sm text-gray-600 dark:text-gray-500 mb-1">Total PnL</div>
           <div className={`text-2xl font-bold ${parseFloat(portfolio.totalPnl) >= 0 ? 'text-green-400' : 'text-red-400'}`}>
             {parseFloat(portfolio.totalPnl) >= 0 ? '+' : ''}{formatCurrency(portfolio.totalPnl)}
           </div>
         </div>
       </div>
 
-      <div className="bg-space-darker rounded-lg p-4 border border-gray-800">
+      <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-4 border border-gray-300 dark:border dark:border-gray-800">
         <div className="flex justify-between items-center">
           <div>
-            <div className="text-sm text-gray-500 mb-1">Funding Rate</div>
-            <div className="text-lg font-semibold text-white">
+            <div className="text-sm text-gray-600 dark:text-gray-500 mb-1">Funding Rate</div>
+            <div className="text-lg font-semibold text-gray-900 dark:text-white">
               {(fundingRate.rate * 100).toFixed(4)}%
             </div>
           </div>
           <div className="text-right">
-            <div className="text-sm text-gray-500 mb-1">Next Funding</div>
-            <div className="text-lg font-semibold text-gray-300">
+            <div className="text-sm text-gray-600 dark:text-gray-500 mb-1">Next Funding</div>
+            <div className="text-lg font-semibold text-gray-700 dark:text-gray-300">
               {formatTime(fundingRate.nextFunding)}
             </div>
           </div>

@@ -22,25 +22,30 @@ export function Navbar() {
     { path: '/whitepaper', label: 'Whitepaper' },
   ]
 
+  const handleLinkClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+    setIsOpen(false) // Close mobile menu if open
+  }
+
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-space-darker/95 backdrop-blur-md border-b border-gray-800'
+          ? 'bg-white/95 dark:bg-space-darker/95 backdrop-blur-md border-b border-gray-200 dark:border-b dark:border-gray-800'
           : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" onClick={handleLinkClick} className="flex items-center space-x-3">
             <img
               src="/logo.png"
-              alt="epsilon Logo"
+              alt="Epsilon Logo"
               className="h-8 w-8"
             />
-            <span className="text-xl font-bold bg-gradient-to-r from-accent-purple to-accent-blue bg-clip-text text-transparent">
-              epsilon
+            <span className="text-xl font-bold" style={{ color: '#e03f00' }}>
+              Epsilon
             </span>
           </Link>
 
@@ -50,10 +55,11 @@ export function Navbar() {
               <Link
                 key={link.path}
                 to={link.path}
+                onClick={handleLinkClick}
                 className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                   location.pathname === link.path
-                    ? 'text-accent-purple'
-                    : 'text-gray-300 hover:text-white'
+                    ? 'text-accent-orange'
+                    : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'
                 }`}
               >
                 {link.label}
@@ -67,7 +73,7 @@ export function Navbar() {
             <ThemeToggle />
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="p-2 rounded-lg bg-space-light hover:bg-opacity-80 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-purple"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-space-light hover:bg-opacity-80 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-orange"
               aria-label="Toggle menu"
               aria-expanded={isOpen}
             >
@@ -105,18 +111,18 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-space-darker border-t border-gray-800"
+            className="md:hidden bg-white dark:bg-space-darker border-t border-gray-200 dark:border-t dark:border-gray-800"
           >
             <div className="px-4 pt-2 pb-4 space-y-1">
               {navLinks.map(link => (
                 <Link
                   key={link.path}
                   to={link.path}
-                  onClick={() => setIsOpen(false)}
+                  onClick={handleLinkClick}
                   className={`block px-3 py-2 rounded-md text-base font-medium transition-colors ${
                     location.pathname === link.path
-                      ? 'text-accent-purple bg-space-light'
-                      : 'text-gray-300 hover:text-white hover:bg-space-light'
+                      ? 'text-accent-orange bg-gray-100 dark:bg-space-light'
+                      : 'text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-space-light'
                   }`}
                 >
                   {link.label}

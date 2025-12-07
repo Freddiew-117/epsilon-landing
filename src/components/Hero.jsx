@@ -88,18 +88,18 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6"
         >
-          <span className="bg-gradient-to-r from-accent-purple via-accent-blue to-accent-turquoise bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-accent-orange via-accent-amber to-accent-red-orange bg-clip-text text-transparent">
             Decentralized Perpetual
           </span>
           <br />
-          <span className="text-white">Futures Trading</span>
+          <span className="text-accent-orange">Epsilon Perpetual DEX</span>
         </motion.h1>
         
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg sm:text-xl text-gray-400 max-w-3xl mx-auto mb-8"
+          className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8"
         >
           Trade perpetual futures with advanced order types, real-time orderbook,
           and cross-market support. Built for traders who demand speed and precision.
@@ -113,13 +113,13 @@ export function Hero() {
         >
           <a
             href="#features"
-            className="px-8 py-3 bg-gradient-to-r from-accent-purple to-accent-blue rounded-lg font-semibold text-white hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-accent-purple focus:ring-offset-2 focus:ring-offset-space-darker"
+            className="px-8 py-3 bg-gradient-to-r from-accent-orange to-accent-amber rounded-lg font-semibold text-white hover:opacity-90 transition-opacity focus:outline-none focus:ring-2 focus:ring-accent-orange focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-space-darker"
           >
             Explore Features
           </a>
           <a
             href="/litepaper"
-            className="px-8 py-3 border-2 border-accent-purple rounded-lg font-semibold text-accent-purple hover:bg-accent-purple hover:bg-opacity-10 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-purple focus:ring-offset-2 focus:ring-offset-space-darker"
+            className="px-8 py-3 border-2 border-accent-orange rounded-lg font-semibold text-accent-orange hover:bg-accent-orange hover:bg-opacity-10 transition-colors focus:outline-none focus:ring-2 focus:ring-accent-orange focus:ring-offset-2 focus:ring-offset-gray-50 dark:focus:ring-offset-space-darker"
           >
             Read Litepaper
           </a>

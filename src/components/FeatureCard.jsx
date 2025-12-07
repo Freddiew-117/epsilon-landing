@@ -10,18 +10,18 @@ export function FeatureCard({ title, description, bullets, illustration, reverse
       className={`flex flex-col ${reverse ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-center gap-8 lg:gap-12 mb-16`}
     >
       <div className="flex-1">
-        <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-white">
+        <h3 className="text-2xl sm:text-3xl font-bold mb-4 text-gray-900 dark:text-white">
           {title}
         </h3>
-        <p className="text-gray-400 mb-6 text-lg">
+        <p className="text-gray-600 dark:text-gray-400 mb-6 text-lg">
           {description}
         </p>
         {bullets && (
           <ul className="space-y-3">
             {bullets.map((bullet, index) => (
               <li key={index} className="flex items-start">
-                <span className="text-accent-turquoise mr-3 mt-1">▸</span>
-                <span className="text-gray-300">{bullet}</span>
+                <span className="text-accent-orange mr-3 mt-1">▸</span>
+                <span className="text-gray-700 dark:text-gray-300">{bullet}</span>
               </li>
             ))}
           </ul>
@@ -29,9 +29,9 @@ export function FeatureCard({ title, description, bullets, illustration, reverse
       </div>
       <div className="flex-1 w-full">
         {illustration || (
-          <div className="bg-space-light rounded-xl p-8 border border-gray-800 glow-purple">
-            <div className="aspect-video bg-gradient-to-br from-accent-purple/20 to-accent-blue/20 rounded-lg flex items-center justify-center">
-              <span className="text-gray-500">Illustration</span>
+          <div className="bg-gray-100 dark:bg-space-light rounded-xl p-8 border border-gray-200 dark:border dark:border-gray-800 glow-orange">
+            <div className="aspect-video bg-gradient-to-br from-accent-orange/20 to-accent-amber/20 rounded-lg flex items-center justify-center">
+              <span className="text-gray-400 dark:text-gray-500">Illustration</span>
             </div>
           </div>
         )}

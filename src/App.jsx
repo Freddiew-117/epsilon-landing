@@ -14,10 +14,10 @@ function App() {
 
   return (
     <Router>
-      <div className="min-h-screen relative">
+      <div className="min-h-screen relative bg-transparent">
         <Starfield />
         <Navbar />
-        <main className="relative z-10">
+        <main className="relative z-10 bg-transparent">
           <Routes>
             <Route path="/" element={<Landing />} />
             <Route path="/litepaper" element={<Litepaper />} />

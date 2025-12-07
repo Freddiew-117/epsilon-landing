@@ -14,13 +14,13 @@ export function Section({ id, title, subtitle, children, className = '' }) {
           >
             {title && (
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                <span className="bg-gradient-to-r from-accent-purple to-accent-blue bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-accent-orange to-accent-amber bg-clip-text text-transparent">
                   {title}
                 </span>
               </h2>
             )}
             {subtitle && (
-              <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
                 {subtitle}
               </p>
             )}

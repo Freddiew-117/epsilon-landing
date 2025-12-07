@@ -10,10 +10,17 @@ export function useTheme() {
   useEffect(() => {
     const root = window.document.documentElement
     const body = window.document.body
-    root.classList.remove('light', 'dark')
-    body.classList.remove('light', 'dark')
-    root.classList.add(theme)
-    body.classList.add(theme)
+    // Remove both classes first
+    root.classList.remove('dark', 'light')
+    body.classList.remove('dark', 'light')
+    
+    if (theme === 'dark') {
+      root.classList.add('dark')
+      body.classList.add('dark')
+    } else {
+      root.classList.add('light')
+      body.classList.add('light')
+    }
     localStorage.setItem('theme', theme)
   }, [theme])
 

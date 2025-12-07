@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion'
 
-export function Banner({ title, message, ctaText, ctaLink, variant = 'purple' }) {
+export function Banner({ title, message, ctaText, ctaLink, variant = 'orange' }) {
   const variantStyles = {
-    purple: 'from-accent-purple/20 to-accent-blue/20 border-accent-purple/50',
-    blue: 'from-accent-blue/20 to-accent-turquoise/20 border-accent-blue/50',
-    turquoise: 'from-accent-turquoise/20 to-accent-purple/20 border-accent-turquoise/50',
+    orange: 'from-accent-orange/20 to-accent-amber/20 border-accent-orange/50',
+    amber: 'from-accent-amber/20 to-accent-red-orange/20 border-accent-amber/50',
+    'red-orange': 'from-accent-red-orange/20 to-accent-orange/20 border-accent-red-orange/50',
   }
 
   const variantGlow = {
-    purple: 'glow-purple',
-    blue: 'glow-blue',
-    turquoise: 'glow-turquoise',
+    orange: 'glow-orange',
+    amber: 'glow-amber',
+    'red-orange': 'glow-red-orange',
   }
 
   return (
@@ -23,12 +23,12 @@ export function Banner({ title, message, ctaText, ctaLink, variant = 'purple' })
     >
       <div className="relative z-10 p-8 sm:p-10 lg:p-12 text-center">
         {title && (
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-white">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
             {title}
           </h3>
         )}
         {message && (
-          <p className="text-lg sm:text-xl text-gray-300 mb-6 max-w-2xl mx-auto">
+          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
             {message}
           </p>
         )}
