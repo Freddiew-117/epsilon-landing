@@ -8,8 +8,21 @@ import { PositionsMock } from '../components/PositionsMock'
 import { DashboardMock } from '../components/DashboardMock'
 import { PositionManagementMock } from '../components/PositionManagementMock'
 import { TokenomicsChart } from '../components/TokenomicsChart'
+import { useState } from 'react'
 
 export function Landing() {
+  const [copied, setCopied] = useState(false)
+
+  const handleCopyAddress = async () => {
+    const address = '0x6De1339094b7dd1E5698428b38b458aEd7997ad2'
+    try {
+      await navigator.clipboard.writeText(address)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy:', err)
+    }
+  }
   return (
     <div>
       <Hero />
@@ -219,7 +232,50 @@ export function Landing() {
         <SpaceDecoration type="planet" position="left" size="small" />
         <Banner
           title="🎁 Initial Airdrop Distribution"
-          message="Everyone holding 100k or less CIFI V1 on XDC Network has been airdropped their tokens from the Initial Airdrop. For balances above 100k, please contact support to claim your tokens."
+          message={
+            <div className="space-y-4 text-left">
+              <div>
+                <p className="font-semibold mb-1">CIFI V1 Holders (XDC Network)</p>
+                <p className="text-base">Everyone holding <span className="font-semibold text-accent-orange">100k or less</span> CIFI V1 on XDC Network has been airdropped their tokens on <span className="font-semibold">BASE network</span> at a <span className="font-semibold text-accent-orange">1:10 ratio</span>.</p>
+              </div>
+              
+              <div>
+                <p className="font-semibold mb-1">CIFI V2 Holders (XDC Network)</p>
+                <p className="text-base">CIFI V2 Holders will have a migration platform soon to move all tokens onto <span className="font-semibold">EPS Base token</span>.</p>
+              </div>
+              
+              <div>
+                <p className="font-semibold mb-1">REFI Token Holders (XDC Network)</p>
+                <p className="text-base">Everyone holding <span className="font-semibold text-accent-orange">200k or less</span> REFI tokens on <span className="font-semibold">XDC Network</span> has been airdropped their tokens on <span className="font-semibold">BASE network</span> at a <span className="font-semibold text-accent-orange">1:10 ratio</span> (same as CIFI).</p>
+              </div>
+              
+              <div>
+                <p className="font-semibold mb-1">NFT Migration (Coming Soon)</p>
+                <p className="text-base">CIFI NFTs such as <span className="font-semibold">Governors</span> and <span className="font-semibold">REFI Dao NFTs</span> will be migrated soon as well.</p>
+              </div>
+              
+              <div className="mt-4 pt-4 border-t border-accent-orange/30">
+                <p className="text-base mb-2">
+                  <span className="font-semibold">Note:</span> For balances above these thresholds, please contact support to claim your tokens.
+                </p>
+                <p className="text-base">
+                  <span className="font-semibold">EPS Token Address (BASE):</span>{' '}
+                  <button
+                    onClick={handleCopyAddress}
+                    className="font-mono text-accent-orange break-all hover:text-accent-amber transition-colors cursor-pointer relative group inline-block"
+                    title="Click to copy"
+                  >
+                    <span className={copied ? 'opacity-0' : ''}>0x6De1339094b7dd1E5698428b38b458aEd7997ad2</span>
+                    {copied && (
+                      <span className="absolute left-1/2 transform -translate-x-1/2 text-green-500 font-semibold whitespace-nowrap">
+                        Copied!
+                      </span>
+                    )}
+                  </button>
+                </p>
+              </div>
+            </div>
+          }
           variant="orange"
         />
       </div>

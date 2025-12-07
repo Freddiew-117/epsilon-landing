@@ -1,10 +1,23 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const [copied, setCopied] = useState(false)
 
   const handleLinkClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
+  const handleCopyAddress = async () => {
+    const address = '0x6De1339094b7dd1E5698428b38b458aEd7997ad2'
+    try {
+      await navigator.clipboard.writeText(address)
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    } catch (err) {
+      console.error('Failed to copy:', err)
+    }
   }
 
   const footerLinks = {
@@ -113,8 +126,27 @@ export function Footer() {
           ))}
         </div>
 
-        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-t dark:border-gray-800 text-center text-sm text-gray-500">
-          <p>&copy; {currentYear} Epsilon. All rights reserved.</p>
+        <div className="mt-8 pt-8 border-t border-gray-200 dark:border-t dark:border-gray-800">
+          <div className="text-center text-xs text-gray-500 dark:text-gray-400 mb-3">
+            <p className="mb-1">
+              <span className="font-semibold">EPS Token Address (BASE):</span>
+            </p>
+            <button
+              onClick={handleCopyAddress}
+              className="font-mono text-accent-orange break-all hover:text-accent-amber transition-colors cursor-pointer relative group"
+              title="Click to copy"
+            >
+              <span className={copied ? 'opacity-0' : ''}>0x6De1339094b7dd1E5698428b38b458aEd7997ad2</span>
+              {copied && (
+                <span className="absolute left-1/2 transform -translate-x-1/2 text-green-500 font-semibold">
+                  Copied!
+                </span>
+              )}
+            </button>
+          </div>
+          <div className="text-center text-sm text-gray-500">
+            <p>&copy; {currentYear} Epsilon. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>

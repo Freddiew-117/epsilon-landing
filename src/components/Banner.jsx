@@ -28,9 +28,13 @@ export function Banner({ title, message, ctaText, ctaLink, variant = 'orange' })
           </h3>
         )}
         {message && (
-          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-            {message}
-          </p>
+          <div className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
+            {typeof message === 'string' ? (
+              <p>{message}</p>
+            ) : (
+              message
+            )}
+          </div>
         )}
         {ctaText && ctaLink && (
           <a

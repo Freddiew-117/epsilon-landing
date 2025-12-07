@@ -88,9 +88,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6"
         >
-          <span className="bg-gradient-to-r from-accent-orange via-accent-amber to-accent-red-orange bg-clip-text text-transparent">
-            Decentralized Perpetual
-          </span>
+         
           <br />
           <span className="text-accent-orange">Epsilon Perpetual DEX</span>
         </motion.h1>
