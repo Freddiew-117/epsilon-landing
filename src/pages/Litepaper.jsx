@@ -117,12 +117,13 @@ export function Litepaper() {
                         <div className="text-2xl font-bold text-accent-orange">25%</div>
                       </div>
                       <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-4 border border-gray-300 dark:border-gray-800">
-                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Buybacks</div>
+                        <div className="text-sm text-gray-600 dark:text-gray-400 mb-1">Airdrop to Holders</div>
                         <div className="text-2xl font-bold text-accent-orange">25%</div>
+                        <div className="text-xs text-gray-600 dark:text-gray-400 mt-1">based on % held</div>
                       </div>
                     </div>
                     <p className="text-gray-700 dark:text-gray-300 text-sm">
-                      Trading fees are allocated as follows: <span className="font-semibold">50% revenue share to stakers</span>, <span className="font-semibold">25% to liquidity</span>, and <span className="font-semibold">25% for buybacks</span>.
+                      Trading fees are allocated as follows: <span className="font-semibold">50% revenue share to stakers</span>, <span className="font-semibold">25% to liquidity</span>, and <span className="font-semibold">25% for airdrop to holders based on % held</span>.
                     </p>
                   </div>
                 </div>
@@ -199,7 +200,7 @@ export function Litepaper() {
                   <h3 className="text-2xl font-semibold mb-4 text-gray-900 dark:text-white">Token Utility</h3>
                   <div className="bg-gray-200 dark:bg-space-darker rounded-lg p-6 border border-gray-300 dark:border-gray-800">
                     <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-2 mb-4 ml-4">
-                      <li><span className="font-semibold text-accent-orange">Revenue Sharing:</span> 50% of trading fees distributed to stakers, 25% allocated to liquidity, and 25% used for buybacks</li>
+                      <li><span className="font-semibold text-accent-orange">Revenue Sharing:</span> 50% of trading fees distributed to stakers, 25% allocated to liquidity, and 25% used for airdrop to holders based on % held</li>
                       <li><span className="font-semibold text-accent-orange">Governance:</span> EPS holders vote on protocol parameters, fee structures, and features</li>
                       <li><span className="font-semibold text-accent-orange">Staking Rewards:</span> Earn a share of protocol revenue and receive voting power</li>
                       <li><span className="font-semibold text-accent-orange">Fee Discounts:</span> Up to 25% discount on trading fees for staked EPS holders</li>

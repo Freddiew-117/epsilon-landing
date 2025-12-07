@@ -236,17 +236,17 @@ export function Landing() {
             <div className="space-y-4 text-left">
               <div>
                 <p className="font-semibold mb-1">CIFI V1 Holders (XDC Network)</p>
-                <p className="text-base">Everyone holding <span className="font-semibold text-accent-orange">100k or less</span> CIFI V1 on XDC Network has been airdropped their tokens on <span className="font-semibold">BASE network</span> at a <span className="font-semibold text-accent-orange">1:10 ratio</span>.</p>
+                <p className="text-base">Everyone holding <span className="font-semibold text-accent-orange">100k or less</span> CIFI V1 on XDC Network has been airdropped their tokens on <span className="font-semibold">BASE network</span> at a <span className="font-semibold text-accent-orange">1:1 ratio</span>.</p>
               </div>
               
               <div>
                 <p className="font-semibold mb-1">CIFI V2 Holders (XDC Network)</p>
-                <p className="text-base">CIFI V2 Holders will have a migration platform soon to move all tokens onto <span className="font-semibold">EPS Base token</span>.</p>
+                <p className="text-base">CIFI V2 Holders will have a migration platform soon to move all tokens onto <span className="font-semibold">EPS Base token 1:1 ratio</span>.</p>
               </div>
               
               <div>
                 <p className="font-semibold mb-1">REFI Token Holders (XDC Network)</p>
-                <p className="text-base">Everyone holding <span className="font-semibold text-accent-orange">200k or less</span> REFI tokens on <span className="font-semibold">XDC Network</span> has been airdropped their tokens on <span className="font-semibold">BASE network</span> at a <span className="font-semibold text-accent-orange">1:10 ratio</span> (same as CIFI).</p>
+                <p className="text-base">Everyone holding <span className="font-semibold text-accent-orange">200k or less</span> REFI tokens on <span className="font-semibold">XDC Network</span> has been airdropped their tokens on <span className="font-semibold">BASE network</span> at a <span className="font-semibold text-accent-orange">1:10 ratio</span>.</p>
               </div>
               
               <div>
