@@ -99,8 +99,8 @@ export function TokenomicsChart() {
             data={tokenomicsData}
             cx="50%"
             cy="50%"
-            labelLine={true}
-            label={<CustomLabel />}
+            labelLine={!isMobile}
+            label={!isMobile ? <CustomLabel /> : false}
             outerRadius={outerRadius}
             fill="#8884d8"
             dataKey="value"
