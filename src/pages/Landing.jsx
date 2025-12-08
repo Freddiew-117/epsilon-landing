@@ -256,6 +256,9 @@ export function Landing() {
               
               <div className="mt-4 pt-4 border-t border-accent-orange/30">
                 <p className="text-base mb-2">
+                  <span className="font-semibold">Snapshot Block:</span> <span className="font-mono text-accent-orange">96917858</span>
+                </p>
+                <p className="text-base mb-2">
                   <span className="font-semibold">Note:</span> For balances above these thresholds, please contact support to claim your tokens.
                 </p>
                 <p className="text-base">
