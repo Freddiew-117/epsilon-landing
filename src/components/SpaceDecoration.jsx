@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
 
-export function SpaceDecoration({ type = 'planet', position = 'left', size = 'medium' }) {
+export function SpaceDecoration({ type = 'spaceship', position = 'left', size = 'medium' }) {
   const sizeClasses = {
     small: 'w-24 h-24 sm:w-32 sm:h-32',
     medium: 'w-32 h-32 sm:w-48 sm:h-48 md:w-64 md:h-64',
@@ -16,11 +16,7 @@ export function SpaceDecoration({ type = 'planet', position = 'left', size = 'me
   // Determine image path based on type
   const imagePath = type === 'spaceship' 
     ? '/spaceship.png' 
-    : type === 'planet-large'
-    ? '/planet-large.png'
-    : type === 'planet-small'
-    ? '/planet-small.png'
-    : '/planet.png' // default planet
+    : '/spaceship.png' // default to spaceship
 
   return (
     <motion.div

@@ -2,7 +2,6 @@ import { Hero } from '../components/Hero'
 import { Section } from '../components/Section'
 import { FeatureCard } from '../components/FeatureCard'
 import { Banner } from '../components/Banner'
-import { SpaceDecoration } from '../components/SpaceDecoration'
 import { OrderbookMock } from '../components/OrderbookMock'
 import { PositionsMock } from '../components/PositionsMock'
 import { DashboardMock } from '../components/DashboardMock'
@@ -28,7 +27,6 @@ export function Landing() {
       <Hero />
       
       <Section id="features" title="Trading Features" subtitle="Everything you need for professional trading" className="relative">
-        <SpaceDecoration type="planet-small" position="left" size="small" />
         <FeatureCard
           title="Orderbook Trading"
           description="Advanced order types for precise execution control."
@@ -202,7 +200,6 @@ export function Landing() {
             'Real-time synchronization',
           ]}
         /> */}
-        <SpaceDecoration type="planet" position="left" size="medium" />
       </Section>
 
       {/* Announcement Banner */}
@@ -219,7 +216,6 @@ export function Landing() {
 
       {/* Tokenomics Section */}
       <Section id="tokenomics" title="Project Tokenomics" className="relative">
-        <SpaceDecoration type="planet" position="right" size="large" />
         <div className="max-w-6xl mx-auto">
           <div className="mb-8">
             <TokenomicsChart />
@@ -229,7 +225,6 @@ export function Landing() {
 
       {/* Airdrop Banner */}
       <div className="relative py-8 sm:py-12 px-4 sm:px-6 lg:px-8">
-        <SpaceDecoration type="planet" position="left" size="small" />
         <Banner
           title="🎁 Initial Airdrop Distribution"
           message={
